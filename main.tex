@@ -1,0 +1,358 @@
+%-------------------------
+% Resume in Latex
+% Author : Matty
+% Based on: https://github.com/jakegut/resume (which was based on https://github.com/sb2nov/resume)
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{xcolor}
+\usepackage{fontawesome5}
+
+\input{glyphtounicode}
+
+% -------------------- FONT --------------------
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-1in} % Default was -.5in
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Section formatting
+\titleformat{\section}{
+  \vspace{-5pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Subsection formatting
+\titleformat{\subsection}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{\hspace{-.15in}}{0em}{}[\color{black}\vspace{-8pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+% -------------------- CUSTOM COMMANDS --------------------
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\setlength{\footskip}{4.08003pt}
+
+% -------------------- START OF DOCUMENT --------------------
+\begin{document}
+
+% -------------------- HEADING--------------------
+\begin{flushright}
+  \vspace{-4pt}
+  \color{gray}
+  \item
+  Last Updated on 15 October, 2025
+\end{flushright}
+
+\vspace{-7pt}
+
+\begin{center}
+    \textbf{\Huge \scshape Mettu Venkata Ramireddy - Lead AI Engineer} \\ \vspace{8pt}
+    \small 
+    \faIcon{mobile}
+    \href{tel:+91-9940109021}{\underline{+91-9940109021}} $  $
+     $  $
+    \faIcon{linkedin}
+    \href{https://www.linkedin.com/in/mvrr/}{\underline{linkedin.com/in/mvrr/}} $  $
+    \faIcon{envelope}
+    \href{mailto:ramdsiitm@gmail.com}
+    {\underline{ramdsiitm@gmail.com}}
+\end{center}
+
+
+
+% -------------------- PROJECTS --------------------
+\section{Experience}
+    \resumeSubHeadingListStart
+    \resumeProjectHeading
+    {\textbf{\large{HighLevel}} $|$ \footnotesize\emph{Lead AI Engineer(DS \& AI)}}{Nov'25 - Present}
+    \resumeItemListStart
+
+    \resumeItem{\textbf{Agentic Evaluation Framework :} Designed and implemented a scalable agentic evaluation framework to systematically evaluate planning accuracy, tool usage efficiency, reasoning quality, and response reliability across multi-agent workflows. Enabled regression tracking and continuous improvement of production-grade agents.}
+
+    \resumeItem{\textbf{Latency \& Token Optimization :} Reduced agent planning latency by \textbf{10x} and overall token consumption by \textbf{4x} through prompt restructuring, planning-stage optimization, caching strategies, and efficient tool invocation design, significantly lowering infrastructure costs.}
+
+    \resumeItem{\textbf{Scalable CRM Agent (100+ Tools) :} Built a production CRM Agent integrated with 100+ tools. Implemented a \textbf{Tool Search with Deferred Loading} architecture to dynamically discover and load relevant tools at runtime. The approach is horizontally scalable and capable of handling \textbf{thousands of tools} without degrading performance.}
+
+    \resumeItem{\textbf{Mentorship \& Technical Leadership :} Mentored engineers and data scientists on agent architecture, evaluation methodologies, prompt optimization, and scalable tool orchestration patterns.}
+
+    \resumeItemListEnd
+    \resumeSubHeadingListEnd
+    \resumeSubHeadingListStart
+    
+        \resumeProjectHeading
+        {\textbf{\large{Yubi (Formerly Credavenue - Bengaluru)}} $|$ \footnotesize\emph{Manager - GenAI}}{Apr'25 - Nov'25}
+        \resumeItemListStart
+        \resumeItem{\textbf{GPT-4o-mini finetuning :}  Fine-tuned GPT-4o-mini using Direct Preference Optimization (DPO) to enhance Hindi conversational colloquialness, improving cultural relevance and naturalness in AI assistant–customer interactions, resulting in a ~20\% increase in human-rated fluency and ~18\% higher customer engagement scores.}
+        
+        \resumeItem{\textbf{AI Agent(LLM) Observability with Langfuse :}  Implemented LLM observability using Langfuse (open-source) to monitor, trace, and evaluate model responses, enabling real-time analytics, prompt performance tracking, and data-driven optimization of LLM workflows.}
+
+        \resumeItem{\textbf{Redis Cache context-aware responses: } Implementation of Redis Cache to store conversation history, enabling context-aware responses during conversations.}
+     \resumeItemListEnd 
+    \resumeSubHeadingListEnd
+    
+    \resumeSubHeadingListStart
+        \resumeProjectHeading
+        {\textbf{\large{Yubi (Formerly Credavenue - Bengaluru)}} $|$ \footnotesize\emph{Lead Data Scientist - Full Stack}}{Oct'23 - Mar'25}
+        \resumeItemListStart
+        \vspace{8pt}
+         \textbf{\large{Datascience Role Responsibilities: }}
+         \resumeItem{\textbf{Bhaasa Voice Bot :}  I currently lead the development and delivery of the NLP and Speech components for the Bhasa Bot, managing client deliverables and conducting demos to ensure client satisfaction. Additionally, I created multiple \textbf{Multi-Agent} and \textbf{RAG}-based conversational bots using LLMs (GPT 3.5 \& 4o-mini, Gemini 2 Flash, Anthropic and Llama), designed with a controlled, stateful flow to improve customer satisfaction and ensure compliance with organisational standards. As part of this, I also added \textbf{multilingual} support for the bot, covering \textbf{15 languages} to cater to a broader customer base. The language switching capability was integrated seamlessly, allowing the bot to dynamically switch languages based on the customer's conversation language, ensuring better accessibility. Furthermore, I enhanced the customer experience by implementing advanced conversational models capable of \textbf{real-time conversations with customers, handling non-linear, linear and combination of linear and non-linear conversations}, making the interactions more natural and fluid.}
+
+         \resumeItem{\textbf{Conversation Disposition Analysis :}  The Collections Conversation Disposition Analysis utilizes the Deepseek R1 model to evaluate each client conversation. It categorizes conversations into five types and assesses the likelihood of the client paying the EMI. In addition to the categories and propensity score, the report includes the reasons for not paying the EMI and the callback time specified by the customer. This analysis aids the client in determining the next steps in the loan recovery process.}
+         
+        
+        \resumeItem{\textbf{Document Image Classification and Table Extraction :}  Classification of given Financial document into Aadhaar, Pan Card, Voter Card, Bank Statement, Profit \& Loss, Cashflow, etc categories. Developed using Donut model(Image only input).Once each document is classified, the selected classes will be sent for table extraction using AWS Textract, followed by post-processing techniques to correct table data and merge any split tables.}
+        
+        \resumeItem{\textbf{Automated Form filling using Conversational Generative(LLMs) AI : } Participated in Google-Yubi Gen AI Hackathon. Demonstrated Form filling using Conversational LLMs(Using BARD LLM \& Speech LLM services).Awarded third prize in a Hackathon competition.}
+        
+        \resumeItem{\textbf{Speech Classification : } Classifying the speech segment using Customer, Agent \& Noise classes. We used Speech brain X-Vector \& I-Vector models(ECAPA-TDNN variants).}
+        
+         \resumeItemListEnd
+         
+       \resumeItemListStart
+       
+    \textbf{\large{Engineering Role Responsibilities:}}
+        \resumeItemListEnd
+ \resumeItemListStart
+    \resumeItem{\textbf{Clearing Tech Debts of Team : } API Creation \& Stadrdisation of Developed models, Code Reviews, Load Testing \& Deploying the and Maintaining the Services in all Environments. }
+    
+    \resumeItem{Maintaining YubiComminity Opensource Repository.}
+    
+    \resumeItem{ \textbf{AI-As-A-Service : } Lead As-As-A-Service Initiative, Demonstrated }
+    Service Deployment, Logging, Price Metering, Rate limiting and Service Authendication & Autherization in POC environment and handed over to engineering for full-scale deployment. }
+    
+    \resumeItem{\textbf{Streaming Service : }Developed Speech Streaming Service using gRPC & WS for ASR service.}
+    \resumeItem{\textbf{Authorization Service : }Developed Authorization Service using Keycoak which is capable of Authorizing users with JWT Tokens along with roles and scopes.}
+     \resumeItemListEnd 
+ \resumeItemListStart
+    \textbf{\large{Leadership Role Responsibilities}}
+        \resumeItemListEnd
+ \resumeItemListStart
+    \resumeItem{Mentoring and guiding interns and reportees on their projects and career development.}
+    \resumeItem{Managing the team's technical debt and initiating engineering tasks based on team requirements.}
+    
+     \resumeItemListEnd
+\resumeSubHeadingListEnd
+     \resumeSubHeadingListStart
+    
+        \resumeProjectHeading
+        {\textbf{\large{Yubi (Formerly Credavenue - Bengaluru)}} $|$ \footnotesize\emph{Senior Data Scientist}}{Jun'22 - Sep'23}
+        \resumeItemListStart
+        \resumeItem{\textbf{YuLan : }Classifying the give text input into 14 Indian Language(27 Classes). Model supports text written in Original \& Latin versions. Developed four versions and open-sourced first 2 versions and published a blog on how to train customized versions as per once requirement.}
+
+        \resumeItem {\textbf{Yubi-IGPT : } The project aims to develop multi-modal fine tuned model for document understanding on Financial  Documents. I researched about all Vision Transformer based models to fine tune on financial documents.Finalised UDOP model as it performing better on all tasks in comparision LayoutLMV3 as well. Pretrained on Multitask(similar to T5 models on NLP) with sample datasets.}
+        
+        \resumeItem {\textbf{Objectionable Content Detection : }Model support in predicting the mention of profanity words in Customer Uploaded Content in Yubi Platform. It helps us to maintain the content hygiene. Used ensambled models developed on Deep Learning \& Ruled Based Libraries.}
+
+         \resumeItem{\textbf{FAQ Search : }FAQ Search Engine for Yubi Products. Developed using a combination of both Asymmetric and Symmetric Sentence Bert models to find the similar questions. Search Engine uses Elasticsearch to store and comptue the vector similarities}
+
+         \resumeItem {\textbf{Name Matching : }Given two names this model give similarity ratio. Internally model uses Fuzzy, Soundex, functions to understand the short forms of personal names and substring  matching to predict the similarity of names. }
+
+         \resumeItem{ \textbf{Attribute Mapping : }This project is aims to help product team by suggesting top 5 most similar attributes for mapping of the Investor API  Attributes to the Yubi Collected Attributes(800+) of  Borrowers in non-contextual setting.Developed Similarity Scoring using Fuzzy ratio and Sentence Bert Embedding using word ninja library.}
+     \resumeItemListEnd 
+    \resumeSubHeadingListEnd
+    \resumeSubHeadingListStart
+        \resumeProjectHeading
+        {\textbf{{\large{Freshworks} (Hyderabad}}) $|$ \footnotesize\emph{Senior SDE - Machine Learning Engineer}}{Apr'21 - May'22}
+    \resumeItemListStart
+    
+    \resumeItem{Smalltalk Improvements for GNLU service.}
+    
+    \resumeItem{Worked on Multilingual(German) support of VA.}
+    
+    \resumeItem{Paraphrase Query Augment model to increase the training and testing samples.}
+    
+    \resumeItem{Custom Intent Improvements for client specific intents.}
+    \resumeItem{Trained models and used frameworks: BERT, RASA DIET ,
+Roberta, LaBSE model, Duckling NER and etc.
+}
+
+   
+     \resumeItemListEnd 
+     \resumeItemListStart
+    \vspace{4pt}
+        \resumeItemListEnd
+ \resumeItemListStart
+ \vspace{-10pt}
+    \resumeItem{Labelling Automation for VA service development, deployment
+and maintenance in all regions US, EU, AU and IND.}
+    \resumeItem{Kubernetes resource usage notification service for cost optimization.}
+    \resumeItem{Label Studio service development, deployment and mainte-
+nance for labelling in all regions US, EU, AU and IND.}
+    \resumeItem{Mimosa Service deployment and maintenance in US and EU re-
+gion.}
+    \resumeItem{AWS RDS Aurora service creation and maintenance for storing
+labelling tasks data in all regions.}
+\resumeItem{AWS Cognito Service for allowing user pool login in all regions.}
+\resumeItem{Build a Continuous Integration pipeline for Label Studio, La-
+belling Automation for VA service and Mimosa Service using
+AWS ECR, ECS, CodeBuild, CodePipeline and FCP.}
+\resumeItem{Jwt Token Authentication Implementation for LabelStudio ser-
+vice.}
+\resumeItem{Used modules and framework: Python, SQL, MySQL, Docker and
+FastAPI.}
+
+\resumeItem{Managed a team of five members from an external vendor for labeling virtual agent client data and monitored the quality of the labeled data.}
+     \resumeItemListEnd 
+
+   
+    \resumeSubHeadingListEnd
+
+\resumeSubHeadingListStart
+   \resumeProjectHeading
+        {\textbf{{\large{Cognicor Technologies, Kochi}}}) $|$ \footnotesize\emph{Machine Learning Engineer}}{Jun'2018-Mar'21}
+      \resumeItemListStart
+          \resumeItem{\textbf{Document Information Extraction using RCNNs :}}{Developed models to detect Table, Procedural Elements, Paragraphs and Heading.Used OCR engine (Tesseract) to extract text information from PDF file.Used modules and framework: Python, Streamlit, ResNet, MobileNet, InceptionV2, RCNN, DETR, TensorFlow, TensorBox, Docker, Flask.}
+        \resumeItem{\textbf{Intent Classification and Named Entity Recognition :}}{Introduced Information handling with Entities, which reduced number of intent classes by ~80\%.
+                        Intent misclassified intents was reduced dramatically. Model performance increased upto 95\% above.
+                        Used ML, Rule based and Regex Pattern matching NER methods to handle every situation.
+                        Extracted entities were used to maintain the context and for profile based response filtering.
+                        
+                        Used modules and framework: Python, Pytorch, BERT, Transformers, FB Duckling module, Docker, Flask.}
+      \resumeItem{\textbf{Hybrid Recommendation Engine :}}{Recommendation engine is used for train on both Content-based and Collaboration based data.
+                        Cold Start issue was solved by using Popularity based recommendation.
+                        Used modules and framework: Python, Turicreate, PySpark, Docker, Flask.}
+       \resumeItem{\textbf{Question-Answer Classification :}}{Given a text sentence, model can classify is it a part of Question or Answer.
+                         Model is sub module of document extraction module.
+                         Used modules and framework: Python, PyTorch, BERT, Transformers, Docker, FastAPI.}
+        \resumeItem{\textbf{Topic relation classification :}}{Module extract pos tagging using ELMO pre-trained module. 
+                         Rule engine resolves the relation.
+                        Used modules and framework: Python, PyTorch, ELMO, Docker, FastAPI.}
+        \resumeItem{\textbf{NLP Search bar for Analytics Dashboard :}}{ Tool is helpful for browsing Analytics Dashboard using NLP Query.
+                         Used Intent Classification model and Entity Extraction Module.
+                         Used modules and framework: Python, BERT, Tensorflow, Docker, Flask.}
+        \resumeItem{\textbf{Contextual Word Embeddings :}}{ Developed a model to embed Contextual Vectors to solve Word Sense Disambiguation using ELMO.
+                         Mined data from Wikipedia, Microsoft website and other sources.   Used modules and framework: PyTorch, Scrapy, Beautiful soup, PRAW, Wikiextractor, PostgreSQL and AllenNLP.}
+      \resumeItemListEnd
+    
+
+  \resumeSubHeadingListEnd
+
+\section{Internship}
+\resumeSubHeadingListStart
+   \resumeProjectHeading
+        {\textbf{{\large{Navro Technilogies, Bangalore}}}) $|$ \footnotesize\emph{Data Science intern}}{Summer 2018}
+      \resumeItemListStart
+          \resumeItem{\textbf{ADR or AEFI Classification :}}{Developed ADR classification ML models to predict Adverse Drug
+Reaction (ADR) or Adverse Event Following Immunization (AEFI)
+from data to provide pharmacovigilance in pharmacy sector.}
+        \resumeItem{}
+          {Mined streaming data from Social Network websites(Twitter)
+and building databases for model training by using Scrapy, Tweepy, PostgreSQL,
+PRAW, and Sklearn, Treebased models.}
+      \resumeItemListEnd
+    
+
+  \resumeSubHeadingListEnd
+%-----------EDUCATION-----------------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Indian Institute of Technology (Madras)}{Chennai, India}
+      {M.Tech in Aero Space Engineering;  CGPA: 7.75}{Jul'15 -- Jul'17}
+  \resumeSubHeadingListEnd
+
+
+ 
+% -------------------- SKILLS --------------------
+\section{Skills}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+    
+     \textbf{Languages}{ : Python, Go, Java, SQL, C/C++, Unix Shell, Julia, Xpath, CSS, Regex} \\
+     
+     \textbf{Frameworks}{ : LangChain, LlamaIndex, AutoGen, LangGraph, DSPy, PySpark, Pytorch, TensorFlow, Keras, Scikit-learn,Pandas, Spacy, Seaborn, Numpy, Scrapy.} \\
+     \textbf{Tools} { : AWS, Azure AI Foundary, Sagemaker, S3, Lambda, EC2, Docker, FastAPI, Flask, Jenkins, Airflow, Git,  MLOps, DataBricks, Kubeflow, Kubernetes, Airflow, Tesseract, PostGreSQL, MongoDB, MySQL, FastAPI, Django, Flask, Streamlit, HTML, Diagrams.} \\
+     
+     \textbf{Interests }{: LLMs(OpenAI, LLaMA, Claude, Palm and Falcon), Transformers (GPT, BERT, LLaMa, LaMDA, BLOOM, PaLM etc.), Natural Language Processing(NLP), Computer Vision, Speech ML, Machine Learning, Zero Knowledge Machine Learning, Large Language Models(LLMs), Deep Learning, Algorithms, Data Engineering, Probability, Statistics, Data Science. } \\
+     
+     % \textbf{Libraries}{: pandas, NumPy, Matplotlib}
+     
+    }}
+ \end{itemize}
+ % -------------------- Awards --------------------
+\section{Awards and Honors}
+ \resumeItemListStart
+           \resumeItem{\textbf{Project Pinnacle Award - Aug 2024}}
+          \resumeItem{\textbf{Yubi-Google Cloud Gen AI Hackathon Prize}}
+          \resumeItem{\textbf{Consistent Performer} of the year award 2023 at \textbf{Yubi}}
+          \resumeItem{\textbf{Q4 2021 The Finisher Award} award at \textbf{Freshwork}}
+        \resumeItem{\textbf{Q3 2021 Spot Award} award at \textbf{Freshwork}}
+         
+      \resumeItemListEnd
+ % -------------------- Blogs and Articles --------------------
+
+\section{Blogs and Articles}
+{Breaking Language Barriers With Yubi’s Language Detection Model – YuLan} \href{https://www.go-yubi.com/blog/breaking-language-barriers-with-yubis-language-detection-model/} {\underline{https://www.go-yubi.com/blog/breaking-language-barriers-with-yubis-language-detection-model/}}
+ % -------------------- Media Mention --------------------
+\section{Media Mentions}
+{\textbf{TOI}:}\href{https://timesofindia.indiatimes.com/business/startups/companies/meet-yubibert-an-open-source-fintech-desi-language-model/articleshow/99600938.cms?from=mdr} {\underline{https://timesofindia.indiatimes.com/yubibert-an-open-source-fintech-desi-language-model}}
+\vspace{4pt}
+
+
+{\textbf{CXOToday}:}\href{https://www.cxotoday.com/press-release/yubi-launches-indias-first-indigenous-open-source-fintech-language-model-yubibert/} {\underline{www.cxotoday.com/yubi-launches-indias-first-indigenous-open-source-fintech-language-model-yubibert/}}
+ 
+\end{document}
